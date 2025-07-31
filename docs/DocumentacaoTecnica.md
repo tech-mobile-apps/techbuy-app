@@ -60,7 +60,7 @@ O app simula uma experiência real de compra de eletrônicos via mobile, permiti
 
 ## 🔐 Autenticação
 
-- JWT salvo via SecureStore (ou AsyncStorage)
+- JWT salvo via AsyncStorage
 - Interceptor do Axios injeta token nas requests
 
 ---
@@ -83,10 +83,10 @@ POST /addresses
 
 ```bash
 # Rodar o app
-npx expo start
+yarn dev
 
-# Rodar API local
-json-server --watch db.json --port 5001
+# Rodar API local(Após alterar a função getBaseUrl() em services/api.ts)
+yarn server
 
 # Rodar testes (depois de configurar)
 yarn test

@@ -23,8 +23,8 @@ Aplicativo mobile de e-commerce desenvolvido em React Native. Permite ao usuári
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-repo.git
-   cd seu-repo
+   git clone https://github.com/tech-mobile-apps/techbuy-app.git
+   cd techbuy-app
    ```
 
 2. Instale as dependências:
@@ -41,22 +41,31 @@ Aplicativo mobile de e-commerce desenvolvido em React Native. Permite ao usuári
 
 4. (Opcional) Para rodar a API local:
 
-   > No arquivo `src/services/api.ts`, descomente a getBaseUrl() local e comente a com o link da render.com:
+   > No arquivo `services/api.ts`, descomente a getBaseUrl() local e comente a com o link da render.com:
+   - Instale o ngrok em: https://ngrok.com/download
 
-   Descomente:
+   - Para rodar o ngrok use o comando:
+
+   ```bash
+   ngrok http 5001
+   ```
+
+   - Copie a url gerada pelo ngrok (algo parecido com: https://63b35b1f6b94.ngrok-free.app)
+
+   - Descomente e substitua a url:
 
    ```ts
    const getBaseUrl = () => {
-   if (Platform.OS === 'web') {
-      return 'http://localhost:5001';
-   }
+     if (Platform.OS === 'web') {
+       return 'http://localhost:5001';
+     }
 
-   Substitua pela url gerada pelo ngrok
-   return 'https://63b35b1f6b94.ngrok-free.app';
+     //Substitua pela url gerada pelo ngrok
+     return 'https://63b35b1f6b94.ngrok-free.app';
    };
    ```
 
-   Comente:
+   - Comente:
 
    ```ts
    // const getBaseUrl = () => 'https://server-c6lo.onrender.com';
@@ -80,7 +89,7 @@ yarn server
 ## 💳 Funcionalidades
 
 - Login e cadastro de usuários
-- Listagem de produtos tecnológicos
+- Listagem de produtos tecnológicos com scroll infinito
 - Carrinho de compras com atualização de quantidade
 - Tela de perfil com opções de adicionar ou remover endereços
 - Escolha de endereço de entrega ou retirada na loja
