@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "bolt-expo-nativewind",
-    "slug": "bolt-expo-nativewind",
+    "name": "TechBuy",
+    "slug": "TechBuy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -14,7 +14,11 @@
     "web": {
       "bundler": "metro",
       "output": "single",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/whiteLogo.png",
+      "meta": {
+        "name": "TechBuy - Loja Online",
+        "description": "Seu e-commerce mobile e web feito com React Native + Expo."
+      }
     },
     "plugins": ["expo-router"],
     "experiments": {

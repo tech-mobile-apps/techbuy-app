@@ -1,6 +1,8 @@
 import { useCart } from '@/contexts/CartContext';
 import { Tabs } from 'expo-router';
 import { ShoppingBag, Chrome as Home, User, ShoppingCart } from 'lucide-react-native';
+import { useEffect } from 'react';
+import { Platform } from 'react-native';
 
 interface TabBarIcon {
   size: number;
@@ -9,6 +11,12 @@ interface TabBarIcon {
 
 export default function TabLayout() {
   const { itemsCount } = useCart();
+
+  useEffect(() => {
+    if (Platform.OS === 'web') {
+      document.title = 'TechBuy - Loja Online';
+    }
+  }, []);
 
   return (
     <Tabs

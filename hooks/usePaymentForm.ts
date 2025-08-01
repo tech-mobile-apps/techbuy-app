@@ -11,7 +11,7 @@ const initialErrors = {
 };
 
 export function usePaymentForm() {
-  const [method, setMethod] = useState('credit_card');
+  const [method, setMethod] = useState('pix');
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCvv] = useState('');
