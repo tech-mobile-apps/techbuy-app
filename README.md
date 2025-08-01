@@ -98,6 +98,47 @@ yarn server
 
 ---
 
+## 🧪 Testes Automatizados
+
+O projeto inclui uma suíte completa de testes automatizados usando Jest e React Native Testing Library.
+
+### Configuração dos Testes
+
+```bash
+# Instalar dependências de teste
+yarn add --dev @testing-library/react-native @testing-library/jest-native jest jest-expo @types/jest
+
+# Ou usar o script de setup
+node setup-tests.js
+```
+
+### Executar Testes
+
+```bash
+# Executar todos os testes
+yarn test
+
+# Executar em modo watch
+yarn test:watch
+# Executar com cobertura
+yarn test:coverage
+
+# Executar testes específicos
+yarn test utils        # Testes de utilitários
+yarn test hooks        # Testes de hooks
+yarn test contexts     # Testes de contextos
+```
+
+### Cobertura de Testes
+
+- ✅ **Utilitários**: `formatCurrency`, `applyMask`, `validators`
+- ✅ **Hooks**: `usePaymentForm`
+- ✅ **Contextos**: `CartContext`
+
+---
+
+---
+
 ## 📆 Hospedagem da API Fake
 
 A API está hospedada em:

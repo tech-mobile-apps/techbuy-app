@@ -44,6 +44,7 @@ export default function PaymentMethodSelector({ form, totalValue }: PaymentMetho
                   onChangeText={form.setCardNumber}
                   mode="outlined"
                   keyboardType="number-pad"
+                  autoComplete="off"
                   style={{
                     marginBottom: form.errors.cardNumberError ? 8 : 16,
                     backgroundColor: '#fff',

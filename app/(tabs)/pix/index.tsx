@@ -88,6 +88,8 @@ export default function PixPage() {
     } catch (error) {
       console.error(error);
       Alert.alert('Erro', 'Erro ao confirmar pagamento. Tente novamente.');
+    } finally {
+      setPayed(false)
     }
   }, [items, total, selectedAddress, paymentMethod, user, clearCart]);
 

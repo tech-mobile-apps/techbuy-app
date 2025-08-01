@@ -70,7 +70,6 @@ export const styles = StyleSheet.create({
     padding: 20,
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
-    // height: 200
   },
   modalWrapper: {
     justifyContent: 'flex-end',

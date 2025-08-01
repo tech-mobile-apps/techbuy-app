@@ -17,7 +17,6 @@ function EmptyState({ icon, text, buttonText, onPress }: EmptyState) {
         justifyContent: 'center',
         gap: 24,
         padding: 12,
-        height: '100%',
         backgroundColor: '#fff',
       }}
     >

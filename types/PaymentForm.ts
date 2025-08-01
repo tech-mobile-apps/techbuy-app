@@ -7,7 +7,7 @@ interface PaymentFormErrors {
 }
 
 export interface PaymentForm {
-  method: 'credit_card' | 'debit_card' | 'pix';
+  method: string;
   setMethod: (value: string) => void;
   cardNumber: string;
   expiryDate: string;

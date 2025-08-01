@@ -15,6 +15,7 @@ import OrderSummary from '@/components/OrderSummary';
 import PaymentMethodSelector from '@/components/PaymentMethodSelector';
 import PickupSwitch from '@/components/PickupSwitch';
 import AddressSelector from '@/components/AddressSelector';
+import { User } from '@/types/User';
 
 export default function CheckoutScreen() {
   const { items, total, clearCart } = useCart();
@@ -23,7 +24,7 @@ export default function CheckoutScreen() {
   const [selectedAddress, setSelectedAddress] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const { userAddress, loadAddresses } = useAddresses(user, inStorePickUp);
+  const { userAddress, loadAddresses } = useAddresses(user as User, inStorePickUp);
   const paymentForm = usePaymentForm();
 
   const totalItems = useMemo(
